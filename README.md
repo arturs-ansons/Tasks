@@ -13,15 +13,15 @@ Task Manager Pro is a simple and efficient web application designed to streamlin
 
 ## Features
 
-Create Tasks: Add new tasks quickly with essential details.
+- Create Tasks: Add new tasks quickly with essential details.
 
-Task Descriptions: Include additional context for better understanding.
+- Task Descriptions: Include additional context for better understanding.
 
-Date and Time: Schedule tasks and set deadlines.
+- Date and Time: Schedule tasks and set deadlines.
 
-Easy Deletion: Remove completed or unnecessary tasks seamlessly.
+- Easy Deletion: Remove completed or unnecessary tasks seamlessly.
 
-Responsive Design: Enjoy a consistent experience on desktop, tablet, or mobile.
+- Responsive Design: Enjoy a consistent experience on desktop, tablet, or mobile.
 
 ## Getting Started
 
