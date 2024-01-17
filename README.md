@@ -25,13 +25,13 @@ Task Manager Pro is a simple and efficient web application designed to streamlin
 
 ## Getting Started
 
-Insert Tasks: Use the simple form to add new tasks.
+- Insert Tasks: Use the simple form to add new tasks.
 
-Task List: View and manage your tasks in an organized list.
+- Task List: View and manage your tasks in an organized list.
 
-Delete Tasks: Remove completed or outdated tasks easily.
+- Delete Tasks: Remove completed or outdated tasks easily.
 
-Validation: Ensure accurate task information with built-in validations.
+- Validation: Ensure accurate task information with built-in validations.
 
 ## Usage
 
