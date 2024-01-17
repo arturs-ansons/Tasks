@@ -1,3 +1,8 @@
+**Environment**
+- PHP version: ^7.4
+- Default Port: 8000
+- Mysql
+
 # Task Manager Pro
 
 Organize Your Tasks with Ease
