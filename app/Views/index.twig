@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <title>Task Viewer</title>
+</head>
+
+<body>
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <form method="POST" action="/insert" name="insertForm" class="form-inline flex-md-row flex-column" onsubmit="submitForm(event)">
+            <input type="hidden" name="formType" value="insert">
+
+            <div class="form-group mb-2">
+                <label for="task_name" class="sr-only">Task</label>
+                <input type="text" class="form-control" id="task_name" name="task_name" placeholder="Task">
+            </div>
+
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="task_description" class="sr-only">Description</label>
+                <input type="text" class="form-control" id="task_description" name="task_description" placeholder="Description">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-2">Insert</button>
+        </form>
+    </div>
+</div>
+
+<div id="errorMessage" class="container mt-3"></div>
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        {% for task in allTasks.getTaskCollection() %}
+        <div class="col-md-4 mb-4">
+            <div class="article-box">
+                <h4 style="text-align: center;">{{ task.getTaskName() }}</h4>
+                <p>{{ task.getTaskDescription() }}</p>
+                <p><strong>Date Created:</strong> {{ task.getDateCreated() }}</p>
+                <div class="d-flex justify-content-center">
+                    <!-- Delete Form -->
+                    <form method="POST" action="/task/{{ task.getId() }}" class="form-inline">
+                        <input type="hidden" name="articleId" value="{{ task.getId() }}">
+                        <button type="submit" name="action" value="delete" class="btn btn-danger mr-2">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% if loop.index % 3 == 0 %}
+    </div>
+    <div class="row justify-content-center">
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+
+</html>
