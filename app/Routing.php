@@ -27,7 +27,7 @@ class Routing
         $dispatcher = simpleDispatcher(function (RouteCollector $r) use ($controller) {
             $r->addRoute('GET', '/', [$controller, 'index']);
             $r->addRoute('POST', '/insert', [$controller, 'insert']);
-            $r->addRoute('POST', '/task/{id:\d+}', [$controller, 'delete']);
+            $r->addRoute('POST', '/task/{id}', [$controller, 'delete']);
         });
 
         $httpMethod = $_SERVER['REQUEST_METHOD'] ?? 'GET';
