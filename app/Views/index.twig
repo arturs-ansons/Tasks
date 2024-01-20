@@ -46,7 +46,6 @@
                 <div class="d-flex justify-content-center">
                     <!-- Delete Form -->
                     <form method="POST" action="/task/{{ task.getId() }}" class="form-inline">
-                        <input type="hidden" name="articleId" value="{{ task.getId() }}">
                         <button type="submit" name="action" value="delete" class="btn btn-danger mr-2">Delete</button>
                     </form>
                 </div>
