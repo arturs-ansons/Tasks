@@ -17,7 +17,7 @@ function submitForm(event) {
     .catch(error => console.error('Error:', error));
 }
 
-    function handleResponse(data) {
+ function handleResponse(data) {
     const errorMessageElement = document.getElementById('errorMessage');
 
     if (data.validationMessage) {
