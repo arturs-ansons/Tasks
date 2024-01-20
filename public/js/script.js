@@ -8,10 +8,8 @@ function submitForm(event) {
 })
     .then(response => {
     if (response.ok) {
-    // Reload the page after a successful response
     location.reload();
 } else {
-    // Handle error response
     return response.json();
 }
 })
