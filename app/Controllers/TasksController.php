@@ -32,25 +32,6 @@ class TasksController extends BaseController
         return $this->tasksView->renderIndex($allTasks);
     }
 
-    /**
-     * @throws \Twig\Error\SyntaxError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\LoaderError
-     */
-    public function view(array $params): string
-    {
-        $taskId = (string)($params['task_name'] ?? 0);
-
-        $task = $this->dbService->getTaskByTitle($taskId);
-
-        if (!$task) {
-            header("Location: /not-found", true, 404);
-            exit();
-        }
-
-        return $this->tasksView->renderSingleTask($task);
-    }
-
     public function delete(array $params): void
     {
         $taskId = (int)($params['id'] ?? 0);
