@@ -27,7 +27,6 @@ class Routing
         $dispatcher = simpleDispatcher(function (RouteCollector $r) use ($controller) {
             $r->addRoute('GET', '/', [$controller, 'index']);
             $r->addRoute('POST', '/insert', [$controller, 'insert']);
-            $r->addRoute('GET', '/task/{title}', [$controller, 'view']);
             $r->addRoute('POST', '/task/{id:\d+}', [$controller, 'delete']);
         });
 
